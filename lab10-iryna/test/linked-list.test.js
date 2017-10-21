@@ -15,11 +15,15 @@ describe('Linked List', function(){
     expect(llTest.head.value).toEqual('one node');
   })
 
-  it('should return a list with one node when passed in a value to prepend', function(){
+  it('should return a new head when passed in a value to prepend', function(){
     let llTest = new LL();
     llTest.append('one node');
     llTest.prepend('prepended value');
     expect(llTest.head.value).toEqual('prepended value');
   })
+
+
+
+
 
 });

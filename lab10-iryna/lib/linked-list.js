@@ -5,19 +5,24 @@ const LinkedList = module.exports = function(node){
   this.head = node||null;
 }
 
+let nodeCount = 0;
+//O(1)
 LinkedList.prototype.prepend = function(value){
+  nodeCount++
   let oldHead = this.head;
   this.head = new Node(value, oldHead);
 }
-
+//O(1)
 LinkedList.prototype.append = function(value){
+  nodeCount++;
   if (this.head === null) return this.head = new Node(value);
   let current = this.head;
   while (current.next!==null) current = current.next;
   current.next = new Node(value, null);
 }
-
+//O(n)
 LinkedList.prototype.remove = function(index) {
+  nodeCount--;
   let current = this.head;
   if (index === 0) {
     this.head = current.next
@@ -27,19 +32,17 @@ LinkedList.prototype.remove = function(index) {
       current.next = current.next.next;
     };
 
+//O(n)
 LinkedList.prototype.reverse = function(){
+  let prev = null;
   let current = this.head;
-
-  while(current.next.next!=null){
-    let prev = current;
-    current = current.next
+  while(current!=null){
+    let next = current.next;
     current.next = prev;
+    prev = current;
+    current = next;
   }
-  this.head = current;
-
-    current.next.next = current;
-    // current = current.next;
-    this.head = current;
+  this.head = prev;
 }
 
 LinkedList.prototype.print = function() {
@@ -49,6 +52,3 @@ LinkedList.prototype.print = function() {
     current = current.next;
   }
 };
-// * implement a Singly Linked List (SLL) data structor
-// * implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
-// * in a comment within each function, note the it's Big-O runtime
