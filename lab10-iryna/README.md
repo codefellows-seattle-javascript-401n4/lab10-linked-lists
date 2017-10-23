@@ -1,6 +1,6 @@
 #### Feature Tasks  
 * implemented a Singly Linked List (SLL) data structor  
-* implemented `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
+* implemented `append(takes values, appends)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
 * added Big-O runtime in comments
 * wrote tests for `append(value)`, `prepend(value)`, and `remove(offset)`
 

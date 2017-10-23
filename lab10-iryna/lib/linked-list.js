@@ -11,7 +11,7 @@ LinkedList.prototype.prepend = function(value){
   this.head = new Node(value, oldHead);
 }
 
-//O(1)
+//O(n)
 LinkedList.prototype.append = function(value){
   if (this.head === null) return this.head = new Node(value);
   let current = this.head;
