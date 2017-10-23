@@ -15,8 +15,8 @@ ll1.prepend('new 0');
 ll1.print();
 
 
-console.log('remove 0: ');
-ll1.remove(0);
+console.log('remove 5th: ');
+ll1.remove(5);
 ll1.print();
 
 console.log('reverse: ')

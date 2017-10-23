@@ -5,32 +5,34 @@ const LinkedList = module.exports = function(node){
   this.head = node||null;
 }
 
-let nodeCount = 0;
 //O(1)
 LinkedList.prototype.prepend = function(value){
-  nodeCount++
   let oldHead = this.head;
   this.head = new Node(value, oldHead);
 }
+
 //O(1)
 LinkedList.prototype.append = function(value){
-  nodeCount++;
   if (this.head === null) return this.head = new Node(value);
   let current = this.head;
   while (current.next!==null) current = current.next;
   current.next = new Node(value, null);
 }
+
 //O(n)
 LinkedList.prototype.remove = function(index) {
-  nodeCount--;
+  if (!this.head) return;
   let current = this.head;
-  if (index === 0) {
-    this.head = current.next
+  if (index===1){
+    this.head = current.next;
+    return;
   } else
-    for(let i = 1; i < index - 1; i++)
-      current = current.next;
+    for(let i = 1; i < index - 1; i++){
+        current = current.next;
+      }
       current.next = current.next.next;
-    };
+      return;
+ }
 
 //O(n)
 LinkedList.prototype.reverse = function(){
