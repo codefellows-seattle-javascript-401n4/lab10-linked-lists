@@ -1,5 +1,44 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Singly Linked List Data Structure
 ====
+Description:
+
+This app builds out an Singly Linked Lists (SLL) that is a data structure which holds a sequence of linked nodes. Each node contains data and a pointer which can point to another node.
+
+Methods - Prepend, Apppend, Remove, and Reverse
+
+Prepend:
+
+Prepend adds a node to the beginning of the structure.  The current node will become the previous node.  
+
+To use the prepend method simply call it in the index.js file:
+  ex: sll.prepend(*); //where star is what you want to prepend
+      sll.print(); //to view nodes
+
+Append:
+
+Prepend adds a node to the SLL structure.  The current node will become wherever you place it. 
+
+To use the append method simply call it in the index.js file:
+  ex: sll.append(*); //where star is what you want to append
+      sll.print(); //to view nodes
+
+Remove:
+
+Remove deletes a node from the SLL structure.  
+
+To use the remove method simply call it in the index.js file:
+  ex: sll.remove(*); //where star is what you want to remove
+      sll.print(); //to view nodes
+
+Reverse:
+
+Reverse reorders the structure e.g. 123 to 321.  
+
+To use the reverse method simply call it in the index.js file:
+  ex: sll.reverse(); 
+      sll.print(); //to view nodes
+
+
 
 ## To Submit this Assignment
   * fork this repository
