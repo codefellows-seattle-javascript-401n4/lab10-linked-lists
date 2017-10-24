@@ -3,18 +3,18 @@
 const LinkedList = require('./lib/linked-list');
 
 let sll = new LinkedList();
-// sll.print();
-// sll.append('one');
-// sll.append('two');
-// sll.append('three');
+
+sll.append('one');
+sll.append('two');
+sll.append('three');
 // sll.append('four');
 
 // sll.remove('wassup');
 // sll.print();
 
-sll.prepend(3);
-sll.prepend(2);
-sll.prepend(1);
+// sll.prepend(3);
+// sll.prepend(2);
+// sll.prepend(1);
 
 // sll.append(4);
 // sll.append(5);

@@ -28,13 +28,12 @@ describe('Singly Linked Lists', () => {
 
   describe('append', () => {
     
-    let sll2 = new LinkedList();
-
     it('should add an inital value to a new empty list', () => {
 
+      let sll2 = new LinkedList();
       
-      sll2 = sll2.prepend('Wasabi');
-      expect(sll2.head).toEqual({value: 'Wasabi', next: null});
+      sll2 = sll2.append('Wasabi');
+      expect(sll2).toEqual({value: 'Wasabi', next: null});
 
     });
 
@@ -58,7 +57,7 @@ describe('Singly Linked Lists', () => {
 
     });
 
-    it('should remove node from list1 at given index', () => {
+    it('should remove node from sll at given index', () => {
 
       sll = sll.remove('one');
       expect(sll.head).toEqual({'next': {'next': {'next': {'next': null, 'value': 'five'}, 'value': 'four'}, 'value': 'three'}, 'value': 'one'});
@@ -67,7 +66,7 @@ describe('Singly Linked Lists', () => {
   });
 
   describe('reverse', () => {
-    it('should reverse the list from one, two, three to three, two, one', () => {
+    it('should reverse the list from one, two, to, three to three, two, one', () => {
 
       let sll = new LinkedList();
       
@@ -75,9 +74,8 @@ describe('Singly Linked Lists', () => {
       sll.prepend('two');
       sll.prepend('three');
       sll.reverse();
-      sll.print();
-      expect(sll).toEqual(   {'head': {'next': {'next': {'next': null, 'value': 'three'}, 'value': 'two'}, 'value': 'one'}, 'previous': null});
+      expect(sll).toEqual({'head': {'next': {'next': {'next': null, 'value': 'three'}, 'value': 'two'}, 'value': 'one'}, 'previous': null});
     
-    });
+    }); 
   });
 }); 
