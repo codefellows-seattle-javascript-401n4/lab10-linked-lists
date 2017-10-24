@@ -13,6 +13,5 @@ ll1.append('five');
 
 
 // console.log(ll1);
-// ll1.print()
 ll1.reverse()
 ll1.print()
