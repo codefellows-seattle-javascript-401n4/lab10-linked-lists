@@ -1,8 +1,8 @@
 'use strict';
 
-const LL = require ('./lib/LinkedList');
+const SLL = require ('./lib/LinkedList');
 
-let ll1 = new LL();
+let ll1 = new SLL();
 
 ll1.append('zero');
 ll1.append('one');
