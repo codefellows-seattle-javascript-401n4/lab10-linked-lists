@@ -6,5 +6,7 @@ let ll = new LinkedList();
 
 ll.append('one');
 ll.append('two');
-ll.prepend('START');
+ll.append('three');
+// ll.prepend('START');
+ll.remove(0);
 ll.print();
