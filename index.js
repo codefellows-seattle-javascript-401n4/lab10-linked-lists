@@ -8,6 +8,7 @@ let newNode = new Node(4);
 let myList = new linkedList(newNode);
 myList.print();     
 
+
 myList.prepend(3);
 myList.prepend(2);
 myList.prepend(1);
@@ -16,7 +17,6 @@ myList.print();
 
 myList.append(5);
 myList.print(); 
-
 
 
 myList.remove(2);
