@@ -12,6 +12,7 @@ ll1.append('four');
 ll1.append('five');
 
 
-// console.log(ll1);
-ll1.reverse()
-ll1.print()
+ll1.reverse();
+let one = ll1.getNode(1);
+console.log(one);
+ll1.print();
