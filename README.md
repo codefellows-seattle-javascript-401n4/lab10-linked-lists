@@ -27,14 +27,14 @@
 
 ####  Documentation  
   * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
+  * your documentation should includes code block usage examples
   * provide instructions for:
     * installing and using your data structure
     * accessing each method
     * running your tests
 
 #### Feature Tasks  
-* implement a Singly Linked List (SLL) data structor  
+* implement a Singly Linked List (SLL) data structure  
 * implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
 * in a comment within each function, note the it's Big-O runtime
 
