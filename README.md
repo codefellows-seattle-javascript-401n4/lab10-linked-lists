@@ -2,19 +2,19 @@
 ====
 
   * To use SinglyLinkedList:
-    `const SLL = require ('./lib/LinkedList');
-    let myLinkList = new SLL();``
+    - `const SLL = require ('./lib/LinkedList');`
+    - `let myLinkList = new SLL();`
   * accessing each method
-    add a value to the end of the linked list:
-    `myLinkList.append(value)`
-    add a value to the beginning of the linked list:
+    * add a value to the end of the linked list:
+      - `myLinkList.append(value)`
+    * add a value to the beginning of the linked list:
     `myLinkList.prepend(value)`
-    get a node by index
-    SLL is zero indexed
+    * get a node by index
+      - SLL is zero indexed
     `myLinkList.getNode(index)`
-    get a node nth from the end of the list (also zero indexed)
-    `myLinkList.findNthNodeFromEnd(index)`
-    `myLinkList.findNthNodeFromEnd(0)` will get you the last node.
+    * get a node nth from the end of the list (also zero indexed)
+      - `myLinkList.findNthNodeFromEnd(index)`
+      - `myLinkList.findNthNodeFromEnd(0)` will get you the last node.
 
   * running tests
     `npm i`
