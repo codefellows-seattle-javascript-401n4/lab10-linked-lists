@@ -2,17 +2,24 @@
 ====
 
 
-    To use SinglyLinkedList:
-    `const SLL = require ('./lib/LinkedList');`
+    * To use SinglyLinkedList:
+    `const SLL = require ('./lib/LinkedList');
+    let myLinkList = new SLL();``
     * accessing each method
+    add a value to the end of the linked list:
+    `myLinkList.append(value)`
+    add a value to the beginning of the linked list:
+    `myLinkList.prepend(value)`
+    get a node by index
+    SLL is zero indexed
+    `myLinkList.getNode(index)`
+    get a node nth from the end of the list (also zero indexed)
+    `myLinkList.findNthNodeFromEnd(index)`
+    `myLinkList.findNthNodeFromEnd(0)` will get you the last node.
 
-    * running your tests
+    * running tests
+    `npm i`
+    `npm test`
 
-
-## Bonus Points:
-  * 2pts
-  * implement `findNthNodeFromEnd(n)` as a method on the SLL prototype
-    * takes `n` as an input/argument, representing the offset from the end to return
-    * returns the nth node from the end (opposite of head) of the list
   * implement `findMiddleNode()` as a pure method on the SLL prototype
     * returns the middle node within the list
