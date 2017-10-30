@@ -1,9 +1,13 @@
 'use strict';
 
-const LL = require('./lib/list');
+const linkedList = require('./lib/list');
 
-let ll1 = new LL();
-ll1.append('one');
+let LL1 = new linkedList();
 
+console.log(LL1);
+LL1.append('first');
+LL1.prepend('actual first');
+console.log(LL1);
 
-ll1.print();
+LL1.remove(1);
+console.log('remove first: ', LL1);
