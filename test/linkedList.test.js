@@ -79,5 +79,28 @@ describe('remove function', () => {
 });
 
 describe('reverse function', () => {
-  it('');
+  it('should successfully reverse if the list is not empty or null', () => {
+    let eleventhLinkedList = new LinkedList();
+    eleventhLinkedList.prepend('ice plants');
+    eleventhLinkedList.prepend('peace lilies');
+    eleventhLinkedList.prepend('sunflowers');
+    eleventhLinkedList.print();
+    eleventhLinkedList.reverse();
+    eleventhLinkedList.print();
+    expect(eleventhLinkedList.head.value).toEqual('ice plants');
+  });
+
+  it('should not reverse if the list is empty or head equals to null', () => {
+    let twelfthLinkedList = new LinkedList();
+    twelfthLinkedList.reverse();
+    expect(twelfthLinkedList.head).toBeNull();
+  });
+
+  it('should place the head to the end of the reversed list', () => {
+    let thirteenthLinkedList = new LinkedList();
+    thirteenthLinkedList.prepend('water lilies');
+    thirteenthLinkedList.prepend('lotus');
+    thirteenthLinkedList.reverse();
+    expect(thirteenthLinkedList.head.next.value).toEqual('lotus');
+  });
 });
