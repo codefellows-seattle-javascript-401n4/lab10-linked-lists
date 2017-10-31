@@ -132,7 +132,7 @@ LinkedList.prototype.print = function() {
   }
 };
 
-//For the reverse function, using prepend and n number of times (a connstant operation n times), the runtime is O of n or O(n). If we use append, the runtime would be O n squared. If you see nested for loop then it's O of n squared because you are doing n operation for every n in the dataset
+//For the reverse function, using prepend and n number of times (a connstant operation n times), the runtime is O of n or O(n). If we use append, the runtime would be O of n squared. If you see nested for loop then it's O of n squared because you are doing n operation for every n in the dataset
 //The easiest way to do reverse is to iterate through the entire list and prepend to each node as we get it. We start by prepending the first node on the new linked list. Then we put the second node before the first node
 LinkedList.prototype.reverse = function() {
   //creating a new blank linked list

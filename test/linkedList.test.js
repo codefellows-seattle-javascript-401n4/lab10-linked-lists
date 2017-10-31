@@ -46,9 +46,38 @@ describe('prepend function', () => {
   });
 
   it('should prepend or adding the new value, "tulips" to the front of the list', () => {
-    let seventhLinkList = new LinkedList();
-    seventhLinkList.prepend('jasmines');
-    seventhLinkList.prepend('tulips');
-    expect(seventhLinkList.head.value).toEqual('tulips');;
+    let seventhLinkedList = new LinkedList();
+    seventhLinkedList.prepend('jasmines');
+    seventhLinkedList.prepend('tulips');
+    expect(seventhLinkedList.head.value).toEqual('tulips');
   });
+});
+
+describe('remove function', () => {
+  it('should Not remove if the list is empty', () => {
+    let eightLinkedList = new LinkedList();
+    eightLinkedList.remove(0);
+    expect(eightLinkedList.head).toBeNull();
+  });
+
+  it('should remove the head if index is 0', () => {
+    let ninthLinkedList = new LinkedList();
+    ninthLinkedList.prepend('daffodils');
+    ninthLinkedList.prepend('narcissus');
+    ninthLinkedList.remove(0);
+    expect(ninthLinkedList.head.value).toEqual('daffodils');
+  });
+
+  it('should remove at any specified index, for example index 1', () => {
+    let tenthLinkedList = new LinkedList();
+    tenthLinkedList.prepend('mumps');
+    tenthLinkedList.prepend('daisies');
+    tenthLinkedList.prepend('azelias');
+    tenthLinkedList.remove(1);
+    expect(tenthLinkedList.head.next.value).toEqual('mumps');
+  });
+});
+
+describe('reverse function', () => {
+  it('');
 });
