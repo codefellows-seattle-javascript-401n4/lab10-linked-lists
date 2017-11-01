@@ -88,6 +88,8 @@ describe('reverse function', () => {
     eleventhLinkedList.reverse();
     eleventhLinkedList.print();
     expect(eleventhLinkedList.head.value).toEqual('ice plants');
+    expect(eleventhLinkedList.head.next.value).toEqual('peace lilies');
+    expect(eleventhLinkedList.head.next.next.value).toEqual('sunflowers');
   });
 
   it('should not reverse if the list is empty or head equals to null', () => {
@@ -96,11 +98,10 @@ describe('reverse function', () => {
     expect(twelfthLinkedList.head).toBeNull();
   });
 
-  it('should place the head to the end of the reversed list', () => {
+  it('should have no error if there is only one item on the list', () => {
     let thirteenthLinkedList = new LinkedList();
-    thirteenthLinkedList.prepend('water lilies');
     thirteenthLinkedList.prepend('lotus');
     thirteenthLinkedList.reverse();
-    expect(thirteenthLinkedList.head.next.value).toEqual('lotus');
+    expect(thirteenthLinkedList.head.value).toEqual('lotus');
   });
 });
