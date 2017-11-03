@@ -1,9 +1,16 @@
 'use strict';
 
+
+
 class SLL {
   constructor(val) {
     this.value = val;
     this.next = null;
+  }
+
+  prependNode(node){
+    if(node instanceof SLL)
+    
   }
 
   appendNode(node) {
