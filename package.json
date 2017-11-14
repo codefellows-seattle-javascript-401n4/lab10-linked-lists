@@ -1,0 +1,27 @@
+{
+  "name": "lab10-linked-lists",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Singly Linked List Data Structure ====",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyleeAndrews/lab10-linked-lists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyleeAndrews/lab10-linked-lists/issues"
+  },
+  "homepage": "https://github.com/RyleeAndrews/lab10-linked-lists#readme",
+  "dependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1"
+  }
+}
