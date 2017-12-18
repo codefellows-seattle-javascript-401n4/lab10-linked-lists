@@ -1,0 +1,34 @@
+{
+  "name": "lab10-linked-lists",
+  "version": "1.0.0",
+  "description": "singly linked lists",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarDavis/lab10-linked-lists.git"
+  },
+  "keywords": [
+    "darryl",
+    "dev",
+    "linked",
+    "list",
+    "linkedlist"
+  ],
+  "author": "darryl d",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarDavis/lab10-linked-lists/issues"
+  },
+  "homepage": "https://github.com/DarDavis/lab10-linked-lists#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1"
+  }
+}
