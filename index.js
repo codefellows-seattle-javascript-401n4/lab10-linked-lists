@@ -1,8 +1,8 @@
 'use strict';
 
 
-const LinkedList = require('./lib/linked-list');
 
+const LinkedList = require('./lib/linked-list');
 
 let ll = new LinkedList();
 
@@ -13,4 +13,5 @@ ll.reverse();
 ll.print();
 
 
-console.log('new linked list:', ll);
+
+console.log('new linked list:', sll);

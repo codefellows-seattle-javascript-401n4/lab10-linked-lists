@@ -1,95 +1,82 @@
 'use strict';
 
-const list = require('./lib/list.js');
-
-require('./lib/list.js');
-require('./lib/append.js');
-require('./lib/prepend.js');
-require('./lib/remove.js');
-require('./lib/reverse');
-
-describe('list.js' function(){
-  let list = new list();
-
-  test('error', function(){
-    list.list(1);
-    expect(list).toEqual({head : {value : 1, next : null}})
-  });
-
-  test('error', function(){
-    list.list(2);
-    expect(list).toEqual({head : {value : 2, next : value}})
-  });
 
 
-describe('append.js' function(){
-  let list = new list();
-
-  test('error', function(){
-    list.append(1);
-    expect(list).toEqual({head : {value : 1, next : null}})
-  });
-
-  test('error', function(){
-    list.append(2);
-    expect(list).toEqual({head : {value : 2, next : value}})
-  });
+const expect = require('expect');
+const LinkedList = require('../lib/linked-list');
 
 
-  describe('prepend.js' function(){
-    let list = new list();
 
-    test('error', function(){
-      list.prepend(1);
-      expect(list).toEqual({head : {value : 1, next : null}})
-    });
+describe('linked lists', () => {
+  let ll = new LinkedList();
 
-    test ('error', function(){
-      list.prepend(2);
-      expect(list).toEqual({head : {value : 2, next : value}})
+  describe('prepend', () => {
+    it('should add a node to list', () => {
+
+      ll = ll.prepend('three');
+      expect(ll.head).toEqual({value: 'three', next: null});
     });
 
 
-    describe('remove.js' function(){
+    it('should prepend additional nodes', () => {
 
-      test('error', function(){
-        let list = new list();
-        list.append(1);
-        list.append(3);
-        list.remove(3);
-        list.append(2);
-        list.append(3);
-        expect(list).toEqual({head : {value : 1, next : null}})
-      });
+      ll = ll.prepend('two');
+      ll = ll.prepend('one');
+
+      expect(ll.head.next).toEqual({'next': {'next': null, 'value': 'three'}, 'value': 'two'});
+    });
+  });
 
 
-    describe('reverse', function(){
 
-      test('error', function(){
-        let list = new list();
-        spyOn(console, 'log');
-        list.reverse();
-        expect(console.log).toHaveBeenCalledWith('error');
-      });
+  describe('append', () => {
+    it('should add an inital value to a new empty list', () => {
 
-      test('error', function(){
-        let list = new list();
-        list.append(1);
-        list.append(2);
-        list.append(3);
-        let newList = list.reverse();
-        expect(newList).toEqual({head : {value : 3, next : {value : 2, next : {value : 1, next : null}}}})
-      });
+      let ll2 = new LinkedList();
 
-      test('error', function(){
-        let list = new list();
-        list.append(1);
-        list.append(2);
-        list.append(3);
-        let newList = list.reverse();
-        expect(list).toEqual({head : null})
-      }
+      ll2 = ll2.append('food');
+      expect(ll2).toEqual({value: 'food', next: null});
     });
 
-  }}
-}};
+
+    it('should add values to the end of list', () => {
+
+      ll = ll.append('four');
+      ll = ll.append('five');
+      expect(ll.head.next).toEqual({'next': {'next': {'next': {'next': null, 'value': 'five'}, 'value': 'four'}, 'value': 'three'}, 'value': 'two'});
+      ll.print();
+    });
+  });
+
+
+
+  describe('remove', () => {
+    it('should return empty list if list is empty', () => {
+      let ll = new LinkedList();
+      ll = ll.remove('four');
+      expect(ll.head).toEqual(null);
+    });
+
+
+    it('should remove node from sll at given index', () => {
+      ll = ll.remove('one');
+      expect(ll.head).toEqual({'next': {'next': {'next': {'next': null, 'value': 'five'}, 'value': 'four'}, 'value': 'three'}, 'value': 'one'});
+      ll.print();
+    });
+  });
+
+
+
+  describe('reverse', () => {
+    it('should reverse the list from one, two, to, three to three, two, one', () => {
+
+      let ll = new LinkedList();
+
+      ll.prepend('one');
+      ll.prepend('two');
+      ll.prepend('three');
+      ll.reverse();
+      expect(ll).toEqual({'head': {'next': {'next': {'next': null, 'value': 'three'}, 'value': 'two'}, 'value': 'one'}, 'previous': null});
+    });
+  });
+});
