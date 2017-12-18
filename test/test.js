@@ -68,7 +68,7 @@ describe('linked lists', () => {
 
 
   describe('reverse', () => {
-    it('should reverse the list from one, two, to, three to three, two, one', () => {
+    it('should reverse the list from one, two, three to three, two, one', () => {
 
       let ll = new LinkedList();
 
