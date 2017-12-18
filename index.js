@@ -3,7 +3,6 @@
 
 
 const LinkedList = require('./lib/linked-list');
-
 let ll = new LinkedList();
 
 ll.append('one');
