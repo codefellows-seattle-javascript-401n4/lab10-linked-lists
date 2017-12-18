@@ -1,16 +1,16 @@
 'use strict';
 
-const list =
-require('./lib/list.js');
-require('./lib/prepend.js');
-require('./lib/append.js');
-require('./lib/reverse.js');
-require('./lib/remove.js');
 
-let listOne = new list();
+const LinkedList = require('./lib/linked-list');
 
-listOne.prepend(2);
-listOne.prepend(3);
-listOne.prepend(1);
-listOne.reverse();
-listOne.print();
+
+let ll = new LinkedList();
+
+ll.append('one');
+ll.append('two');
+ll.append('three');
+ll.reverse();
+ll.print();
+
+
+console.log('new linked list:', ll);

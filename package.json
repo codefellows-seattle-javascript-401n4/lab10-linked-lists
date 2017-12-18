@@ -4,14 +4,14 @@
   "description": "lab-10",
   "main": "\"main\": \"index.js\"",
   "directories": {
-    "test": "test"
+    "test": "mocha"
   },
   "dependencies": {
     "eslint": "^4.9.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
