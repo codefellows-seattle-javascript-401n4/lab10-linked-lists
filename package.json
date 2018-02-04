@@ -1,0 +1,30 @@
+{
+  "name": "lab10-linked-lists",
+  "version": "1.0.0",
+  "description": "lab-10",
+  "main": "\"main\": \"index.js\"",
+  "directories": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "eslint": "^4.9.0",
+    "expect": "^22.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namgungssi/lab10-linked-lists.git"
+  },
+  "keywords": [
+    "lab10"
+  ],
+  "author": "brian namgung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namgungssi/lab10-linked-lists/issues"
+  },
+  "homepage": "https://github.com/namgungssi/lab10-linked-lists#readme"
+}
